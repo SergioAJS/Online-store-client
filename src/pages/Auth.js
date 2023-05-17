@@ -1,13 +1,13 @@
 import { observer } from "mobx-react-lite";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Container, Form, Card, Button } from 'react-bootstrap'
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { Context } from "../index";
 import { login, registration } from "../http/userAPI";
 import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/consts";
+import useAuth from "../hooks/useAuth";
 
 const Auth = observer(() => {
-    const {user} = useContext(Context)
+    const {user} = useAuth()
     const location = useLocation()
     const history = useNavigate()
     const isLogin = location.pathname === LOGIN_ROUTE
