@@ -7,7 +7,7 @@ import useAuth from "../hooks/useAuth";
 const AppRouter = () => {
     const {user} = useAuth()
 
-    console.log(user)
+    console.log(user.role)
     return (
         <Routes>
             {user.isAuth && authRoutes.map(({ path, Component }) =>

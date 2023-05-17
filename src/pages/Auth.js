@@ -24,6 +24,7 @@ const Auth = observer(() => {
             }
             user.setUser(data)
             user.setIsAuth(true)
+            user.setRole(data.role)
             history(SHOP_ROUTE)
         } catch (e) {
             alert(e.response.data.message)
