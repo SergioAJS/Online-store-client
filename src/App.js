@@ -19,7 +19,7 @@ const App = observer(() => {
         user.setRole(data.role)
       }).finally(() => setLoading(false))
     }, 1000)
-  }, [])
+  }, [user])
 
   if (loading) {
     return <Spinner animation={"grow"}/>
