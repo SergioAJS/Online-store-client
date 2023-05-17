@@ -8,7 +8,6 @@ import { observer } from "mobx-react-lite";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-// import { logout } from "../http/userAPI";
 
 const NavBar = observer(() => {
   const { user } = useAuth();
@@ -18,7 +17,6 @@ const NavBar = observer(() => {
     user.setUser({});
     user.setIsAuth(false);
     user.setRole("");
-    // logout();
   };
 
   return (
